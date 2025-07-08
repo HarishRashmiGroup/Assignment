@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: seamless-frontend
+    env: node
+    buildCommand: yarn && yarn build  
+    startCommand: yarn start
+    routes:
+      - source: /*
+        destination: /index.html
