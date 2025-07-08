@@ -49,7 +49,7 @@ const LoginScreen = () => {
       localStorage.setItem('token', response.token);
       toast({ title: `${isLogin ? 'Login' : 'Signup'} successful!`, status: 'success' });
       const user = await getUser();
-      if (user.role === 'admin') navigate('admin');
+      if (user.role === 'admin') navigate('/admin');
       else navigate('/');
     } catch (err) {
       toast({ title: err.message || 'Error', status: 'error' });
